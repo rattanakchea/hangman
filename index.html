@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript Hangman</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1>Hangman | <strong>Version 2</strong></h1>
+                <nav class="pull-right">
+                    <p>Select Game Type:</p>
+                        <input type="radio" name="images" value="country" checked>Country
+                        <input type="radio" name="images" value="movieStar">Movie Star
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <div id="hangman_img" class="image0"></div>
+                </div>
+
+                <div id="word" class="col-md-4 text-center">
+                    <h4>Your word is:</h4>
+                    <h3><strong id="targetWord"></strong></h3>
+                </div>
+
+                <div id="guesses" class="col-md-4 text-center">
+                    <h4>You have guessed</h4>
+                    <h3><strong id="previousGuesses"><em>nothing yet... type in the box or click on an alphabet below</em></strong></h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 text-center">
+                        <p>Life Remaining : <span id="lifeRemaining"></span></p>
+                </div>
+                <div id="clue" class="col-md-4 text-center">
+                        <p>Clue:</p>
+                        <p><img id="poster" src="http://placehold.it/185x200"></span>
+                </div>
+                <div id="guessInput" class="col-md-4 text-center">
+                    <input type="text" maxlength="1" id="guess" placeholder="Type a letter" /><span id="feedback"></span>
+                </div>
+            </div>
+            <!-- dynamically created keyboard buttons -->
+            <br><br>
+             <div class="row">
+                 <div class="col-md-12 text-center">
+                     <div id="buttons">
+                     <!-- buttons placeholder -->
+                     </div>
+                 </div>
+             </div>
+        </div>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/hangman2.js" type="text/javascript"></script>
+        <script src="js/tmdb.js" type="text/javascript"></script>
+        <script src="js/movieDB.js" type="text/javascript"></script>
+
+        <div class="modal fade" id="endGameDialog" tabindex="-1" role="dialog" aria-labelledby="endGameDialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4><a onclick="refreshPage();" class="close" data-dismiss="modal" aria-hidden="true">&times;</a></h4>
+                        <h4 id="endGameDialogTitle"></h4>
+                    </div>
+                    <div class="modal-body" id="endGameDialogContent"></div>
+                    <div class="modal-footer">
+                        <h4><a onclick="newGame();" class="btn btn-primary" data-dismiss="modal">New Game</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
