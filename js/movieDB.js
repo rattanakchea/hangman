@@ -48,7 +48,6 @@ $(document).ready(function() {
         
         switch(value) {
         	case "movieStar":
-        		alert("click");
         		searchMovies();
         		//setTimeout(drawWord, 2000);        		
         		break;
