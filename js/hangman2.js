@@ -226,7 +226,8 @@ $(document).ready(function() {
     //listen to user input
     $('#guess').attr('onkeyup', 'update();');
 
-    _buttons.on('click', 'a.alphabet', function(){
+    _buttons.on('click', 'a.alphabet', function(e){
+    	e.preventDefault();
     	guess = $(this).text();
     	//$(this).hide();  //affect the whole display
     	$(this).css('visibility', 'hidden'); //just hide

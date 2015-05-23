@@ -43,6 +43,11 @@
 	}
 
 $(document).ready(function() {
+	
+	$('#clueBtn').click(function(){
+			$('#clue').toggle(500);	
+	})
+
 	$('input[type="radio"]').on('click', function(e){
         value = (this.value);
         

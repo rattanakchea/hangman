@@ -2,6 +2,7 @@
 
 - Interactive, Fun, Educational Game.
 - Guess the country name or your favorite movie star
+- Mobile Responsive
 
 ![Image of Hangman]
 

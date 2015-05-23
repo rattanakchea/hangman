@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Javascript Hangman</title>
+        <title>Hangman | Javascript</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -9,40 +9,43 @@
     </head>
     <body>
         <div class="container">
-            <div class="page-header">
-                <h1>Hangman | <strong>Version 2</strong></h1>
+            <div class="row">
+                <h2 class="heading">Hangman</h2>
                 <nav class="pull-right">
                     <p>Select Game Type:</p>
                         <input type="radio" name="images" value="country" checked>Country
                         <input type="radio" name="images" value="movieStar">Movie Star
                 </nav>
             </div>
+            <br></hr>
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-4 col-xs-6">
                     <div id="hangman_img" class="image0"></div>
                 </div>
-
-                <div id="word" class="col-md-4 text-center">
+                <div id="word" class="col-md-4 col-xs-6 text-center">
                     <h4>Your word is:</h4>
                     <h3><strong id="targetWord"></strong></h3>
                 </div>
-
-                <div id="guesses" class="col-md-4 text-center">
-                    <h4>You have guessed</h4>
-                    <h3><strong id="previousGuesses"><em>nothing yet... type in the box or click on an alphabet below</em></strong></h3>
+                <div id="clue" class="col-md-4 col-xs-12 text-center">                       
+                        <p><img id="poster" src="http://placehold.it/185x200"></span>
+                        <p>Clue</p>
                 </div>
             </div>
-
             <div class="row">
-                <div class="col-md-4 text-center">
+            
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-xs-6 text-center">
                         <p>Life Remaining : <span id="lifeRemaining"></span></p>
+                        <button id="clueBtn" type="button" class="btn btn-default">Toggle Clue</button>
                 </div>
-                <div id="clue" class="col-md-4 text-center">
-                        <p>Clue:</p>
-                        <p><img id="poster" src="http://placehold.it/185x200"></span>
-                </div>
-                <div id="guessInput" class="col-md-4 text-center">
+
+                <div id="guessInput" class="col-md-4 col-xs-6 text-center">
                     <input type="text" maxlength="1" id="guess" placeholder="Type a letter" /><span id="feedback"></span>
+                </div>
+                 <div id="guesses" class="col-md-4 col-xs-12 text-center">
+                    <h4>You have guessed</h4>
+                    <h3><strong id="previousGuesses"><em>nothing yet... type in the box or click on an alphabet below</em></strong></h3>
                 </div>
             </div>
             <!-- dynamically created keyboard buttons -->
